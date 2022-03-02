@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Boules de noël{% endblock %}
+
+{% block body %}
+<div class="d-flex">
+{% for boule in boules %}
+    <div>
+    {% if  boule.promotion!= null %}
+        Promotion
+     {% endif %}
+    <img class="rounded-circle" src="{{ boule.photo }}" alt="">
+    
+
+    </div>
+{% endfor %}
+</div>
+{% endblock %}
